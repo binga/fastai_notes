@@ -4,18 +4,12 @@
 # 3. https://github.com/uploadcare/pillow-simd & https://pillow.readthedocs.io/en/latest/handbook/index.html
 # 3. https://github.com/pytorch/vision
 
-import pandas as pd
-import numpy as np
+import os
 from PIL import Image
 
 import torch
 import torchvision
 from torchvision.transforms import *
-
-import os
-
-os.getcwd()+"/../data/dog.jpg"
-os.getcwd()
 
 # Reading image using PIL
 im = Image.open(os.getcwd()+"/data/dog.jpg")
@@ -49,14 +43,13 @@ im_torch = torch.from_numpy(im_numpy)
 im_torch.size()
 
 
-
 # Reshaping the torch tensor. Numpy's reshape analogous to PyTorch's view
 im_torch.view((3, 720, 1280))
 
 print(im_torch.size())
 
 topil = torchvision.transforms.ToPILImage()
-topil(im_torch.view((3, 720, 1280)))
+topil(im_torch.view((3, 720, 1280))) # Something is wrong here!!!
 
 
 # Torchvision is a specific library for PyTorch users that deals with several Image
@@ -65,9 +58,9 @@ torchvision.get_image_backend()
 
 # In PyTorch, in one go, we could do all the transformations required by mentioning
 # all the trafos in a compose block.
-torchvision.transforms.Compose([
-    transforms.CenterCrop(10),
-    transforms.ToTensor()
+tfms = torchvision.transforms.Compose([
+    CenterCrop(10),
+    ToTensor()
 ])
 
 
@@ -84,11 +77,11 @@ torchvision.transforms.Compose([
 r, g, b = im.split()
 b
 
-# Transforms
+# Transforms in PIL
 ## Rotate
 im.rotate(60)
 
 ## Crop
-box = (50, 50, 200, 200)
+box = (50, 50, 250, 250)
 region = im.crop(box)
 region
