@@ -1,6 +1,6 @@
 # fastai_notes
 
-I am selected for the International Fellowship offered by fast.ai (University of San Francisco) to attend the Deep Learning Class (v2) October 2017 cohort. This class is taught by Jeremy Howard and Rachel Thomas.
+I am selected for the International Fellowship offered by [fast.ai](http://www.fast.ai/) (University of San Francisco) to attend the Deep Learning Class (v2) October 2017 cohort. This class is taught by [Jeremy Howard](https://twitter.com/jeremyphoward) and [Rachel Thomas](https://twitter.com/math_rachel).
 
 I am currently attending the program remotely from India. This repository contains all my classnotes, experiments, reproducible notebooks for various Kaggle / AI / Computer Vision Challenges.
 
