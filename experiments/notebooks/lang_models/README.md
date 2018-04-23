@@ -5,6 +5,7 @@ This folder contains relevant files for creating a language model for the Telugu
 
 
 TODO:
+- [ ] Host the language model weights for the community to reuse the model directly
 - [ ] Finetune
 - [ ] Use continuous cache pointer (from here: https://github.com/salesforce/awd-lstm-lm)
 - [ ] Try QRNN (from here: https://github.com/salesforce/pytorch-qrnn/)
