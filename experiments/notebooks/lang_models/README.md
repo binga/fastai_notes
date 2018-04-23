@@ -6,7 +6,7 @@ This folder contains relevant files for creating a language model for the Telugu
 
 TODO:
 - [ ] Finetune
-- [ ] Use continue cache pointer (from here: https://github.com/salesforce/awd-lstm-lm)
+- [ ] Use continuous cache pointer (from here: https://github.com/salesforce/awd-lstm-lm)
 - [ ] Try QRNN (from here: https://github.com/salesforce/pytorch-qrnn/)
 - [ ] Identify new datasets for sentiment analysis.
 - [ ] Figure out if there are any summarization datasets out there.
