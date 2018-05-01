@@ -34,7 +34,7 @@ Lesson - 13
 - Densenet is similar to resnet except that when merge happens, it's a concat
 - Revisit the 7x1 and 1x7 conv again. Factored convolutions
 - Standard resnet on top of inception stem.
-- progressive gans paper uses
+- progressive gans paper uses progressive resizing
 - runaway feedback loops in predictive policing
 - content loss == perceptual loss
 - VV - you dont need gradients for the input
@@ -42,3 +42,20 @@ Lesson - 13
 - try style transfer with sgd
 - try half precision floating point
 - Try doing gatys style transfer just doing diagonal of the gram matrix
+
+
+Lesson - 14
+- Goals of the superres model is to build a model that can take in an image of any size and still be able to super-res it!
+- We could build a dataset as big as we'd like by just downsampling images that we have
+- projects: de-skew, de-rotate, colorisation, noise reduction, remove black artifacts from xerox
+- With resnet style architectures, the adaptive avg pooling completely throws away the visual geometry of the input image.
+- Transposed convolutions produce checkerboard artifacts.
+- pixel-shuffle - subsamping
+-
+- Super Resolution doesn't need batchnorms since the model is figuring out identity - like functions and doesn't want to change the scale of the images
+- Transpose convolution - sometimes the 8/9 pixes are zeroes. Right approach?
+- pixel shuffle in upsample version of super-res
+- Segmentation:
+- When you increase the image sizes, decrease your batch size - due to limited GPU RAM
+- Try and replicate the U-Net and try carvana
+- 
